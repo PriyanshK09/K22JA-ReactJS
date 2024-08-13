@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Basics</title>
+</head>
+<body>
+    <h1>JS Basics</h1>
+    <p id="demo"></p>
+
+    <script>
+        let a = 8;
+        document.write(a);
+
+        // Cannot access 'a' before initialization
+
+        // LET is Block Level, i.e. only available inside the block they are defined.
+        // VAR is avaiable throughout the Function, i.e. Globally Scoped.
+        // VAR : Variables declared using var can be re-declared and updated within the same scope.
+        // LET : Variables declared with let can be updated but not re-declared within the same scope.
+
+        // CONST : Keyword used to declare constant variable whose value can't be changed.
+        const x = 12;
+        x = 13;
+        x += 1;
+        document.write(x);
+
+        // Javascript Output :
+        // JS can "DISPLAY" data in different ways :
+        // - Writing into an HTML element, using innerHTML.
+        // - Writing into an alert box, using alert().
+        // - Writing into the browser console, using console.log() or document.write().
+
+        // Writing into an HTML element, using innerHTML.
+        document.getElementById("demo").innerHTML = 5 + 6;
+
+        // Writing into an alert box, using alert().
+        alert(5 + 6);
+
+        // Writing into the browser console, using console.log() or document.write().
+        console.log(5 + 6);
+        document.write(5 + 6);
+
+        // Javascript Syntax :
+        // JS is written in plain text, like HTML and CSS.
+        // JS is case-sensitive.
+        // JS statements are separated by semicolons.
+        // JS ignores multiple spaces. You can add white space to your script to make it more readable.
+    </script>
+</body>
+</html>
