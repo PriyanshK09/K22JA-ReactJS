@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-bottom: 20px;
+        }
+        .output h3 {
+            margin-bottom: 5px;
+        }
+        .output pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="output-container"></div>
+
     <script>
+        function appendOutput(title, content) {
+            const container = document.getElementById('output-container');
+            const outputDiv = document.createElement('div');
+            outputDiv.className = 'output';
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = title;
+            const contentElement = document.createElement('pre');
+            contentElement.textContent = content;
+            outputDiv.appendChild(titleElement);
+            outputDiv.appendChild(contentElement);
+            container.appendChild(outputDiv);
+        }
+
         // JavaScript code with variables, classes, objects, constructor, destructor
         
         // Variables
@@ -22,6 +53,7 @@
             
             sayHello() {
                 console.log("Hello, " + this.name);
+                appendOutput('MyClass sayHello', "Hello, " + this.name);
             }
         }
         
@@ -32,6 +64,7 @@
         // Destructor
         MyClass.prototype.destroy = function() {
             console.log("Destroying " + this.name);
+            appendOutput('MyClass destroy', "Destroying " + this.name);
         };
         myObject.destroy();
 
@@ -43,6 +76,7 @@
             
             sayHello() {
                 console.log("Hello, " + this.name);
+                appendOutput('MyAnotherClass sayHello', "Hello, " + this.name);
             }
         }
 
@@ -57,6 +91,7 @@
             
             drive() {
                 console.log("Driving " + this.brand);
+                appendOutput('Car drive', "Driving " + this.brand);
             }
         }
 
@@ -70,6 +105,7 @@
             drive() {
                 super.drive(); // Call the parent class method
                 console.log("Driving at a speed of " + this.speed + " mph");
+                appendOutput('SportsCar drive', "Driving at a speed of " + this.speed + " mph");
             }
         }
 
@@ -88,7 +124,9 @@
         }
 
         console.log(MathHelper.add(10, 5));
+        appendOutput('MathHelper add', MathHelper.add(10, 5));
         console.log(MathHelper.subtract(10, 5));
+        appendOutput('MathHelper subtract', MathHelper.subtract(10, 5));
 
         // Implicit Explicit 
         class Person {
@@ -98,6 +136,7 @@
             
             sayHello() {
                 console.log("Hello, " + this.name);
+                appendOutput('Person sayHello', "Hello, " + this.name);
             }
         }
 
@@ -107,6 +146,7 @@
         // Implicit Binding
         let sayHello = function() {
             console.log("Hello, " + this.name);
+            appendOutput('Implicit Binding sayHello', "Hello, " + this.name);
         };
 
         let person1 = {
@@ -125,6 +165,7 @@
         // Explicit Binding
         let sayHello1 = function() {
             console.log("Hello, " + this.name);
+            appendOutput('Explicit Binding sayHello', "Hello, " + this.name);
         };
 
         let person3 = {
@@ -136,6 +177,7 @@
         // Arrow Functions
         let sayHello2 = () => {
             console.log("Hello, " + this.name);
+            appendOutput('Arrow Function sayHello', "Hello, " + this.name);
         };
 
         let person4 = {
@@ -148,6 +190,7 @@
         // Arrow Functions with Parameters
         let sayHello3 = (name) => {
             console.log("Hello, " + name);
+            appendOutput('Arrow Function with Parameters sayHello', "Hello, " + name);
         };
 
         sayHello3("John");
@@ -155,56 +198,67 @@
         // Array
         let myArray = [1, 2, 3, 4, 5];
         console.log(myArray);
+        appendOutput('Initial Array', myArray);
 
         // Array Methods
         console.log(myArray.length);
+        appendOutput('Array Length', myArray.length);
 
         myArray.push(6);
-
         console.log(myArray);
+        appendOutput('Array after push', myArray);
 
         myArray.pop();
-
         console.log(myArray);
+        appendOutput('Array after pop', myArray);
 
         myArray.shift();
-
         console.log(myArray);
+        appendOutput('Array after shift', myArray);
 
         myArray.unshift(1);
-
         console.log(myArray);
+        appendOutput('Array after unshift', myArray);
 
         myArray.splice(2, 1);
-
         console.log(myArray);
+        appendOutput('Array after splice', myArray);
+
+        myArray.concat([6, 7, 8]);
+        console.log(myArray);
+        appendOutput('Array after concat', myArray);
+
+        myArray.slice(1, 3);
+        console.log(myArray);
+        appendOutput('Array after slice', myArray);
 
         // Dynamic Array
         let myDynamicArray = [];
         myDynamicArray.push(1);
         myDynamicArray.push(2);
         myDynamicArray.push(3);
-
         console.log(myDynamicArray);
+        appendOutput('Dynamic Array', myDynamicArray);
 
         // Array Iteration
         myArray.forEach((element) => {
             console.log(element);
+            appendOutput('Array Iteration', element);
         });
 
         // Array Map
         let myNewArray = myArray.map((element) => {
             return element * 2;
         });
-
         console.log(myNewArray);
+        appendOutput('Array Map', myNewArray);
 
         // Array Filter
         let myFilteredArray = myArray.filter((element) => {
             return element > 2;
         });
-
         console.log(myFilteredArray);
+        appendOutput('Array Filter', myFilteredArray);
     </script>
 </body>
 </html>
