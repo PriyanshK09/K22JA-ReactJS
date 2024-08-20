@@ -179,13 +179,32 @@
 
         console.log(myArray);
 
-        myArray.splice(2, 0, 3);
+        // Dynamic Array
+        let myDynamicArray = [];
+        myDynamicArray.push(1);
+        myDynamicArray.push(2);
+        myDynamicArray.push(3);
 
-        console.log(myArray);
+        console.log(myDynamicArray);
 
-        myArray.splice(2, 1, 4);
+        // Array Iteration
+        myArray.forEach((element) => {
+            console.log(element);
+        });
 
-        console.log(myArray);
+        // Array Map
+        let myNewArray = myArray.map((element) => {
+            return element * 2;
+        });
+
+        console.log(myNewArray);
+
+        // Array Filter
+        let myFilteredArray = myArray.filter((element) => {
+            return element > 2;
+        });
+
+        console.log(myFilteredArray);
     </script>
 </body>
 </html>
