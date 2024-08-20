@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Concepts</title>
+</head>
+<body>
+    
+    <script>
+        // JavaScript code with variables, classes, objects, constructor, destructor
+        
+        // Variables
+        let myVariable = 10;
+        const myConstant = "Hello";
+        
+        // Classes
+        class MyClass {
+            constructor(name) {
+                this.name = name;
+            }
+            
+            sayHello() {
+                console.log("Hello, " + this.name);
+            }
+        }
+        
+        // Objects
+        let myObject = new MyClass("John");
+        myObject.sayHello();
+        
+        // Destructor
+        MyClass.prototype.destroy = function() {
+            console.log("Destroying " + this.name);
+        };
+        myObject.destroy();
+
+        // THIS keyword
+        class MyAnotherClass {
+            constructor(name) {
+                this.name = name;
+            }
+            
+            sayHello() {
+                console.log("Hello, " + this.name);
+            }
+        }
+
+        let myAnotherObject = new MyAnotherClass("John");
+        myAnotherObject.sayHello();
+
+        // Class Inheritance (Car Example)
+        class Car {
+            constructor(brand) {
+                this.brand = brand;
+            }
+            
+            drive() {
+                console.log("Driving " + this.brand);
+            }
+        }
+
+        // Child class inheriting from Car
+        class SportsCar extends Car {
+            constructor(brand, speed) {
+                super(brand); // Call the parent class constructor
+                this.speed = speed;
+            }
+            
+            drive() {
+                super.drive(); // Call the parent class method
+                console.log("Driving at a speed of " + this.speed + " mph");
+            }
+        }
+
+        let mySportsCar = new SportsCar("Ferrari", 200);
+        mySportsCar.drive();
+    </script>
+    
+</body>
+</html>
