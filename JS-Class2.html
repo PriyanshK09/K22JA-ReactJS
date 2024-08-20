@@ -75,6 +75,84 @@
 
         let mySportsCar = new SportsCar("Ferrari", 200);
         mySportsCar.drive();
+
+        // Static Methods
+        class MathHelper {
+            static add(a, b) {
+                return a + b;
+            }
+            
+            static subtract(a, b) {
+                return a - b;
+            }
+        }
+
+        console.log(MathHelper.add(10, 5));
+        console.log(MathHelper.subtract(10, 5));
+
+        // Implicit Explicit 
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            
+            sayHello() {
+                console.log("Hello, " + this.name);
+            }
+        }
+
+        let person = new Person("John");
+        person.sayHello();
+
+        // Implicit Binding
+        let sayHello = function() {
+            console.log("Hello, " + this.name);
+        };
+
+        let person1 = {
+            name: "John",
+            sayHello: sayHello
+        };
+
+        let person2 = {
+            name: "Jane",
+            sayHello: sayHello
+        };
+
+        person1.sayHello();
+        person2.sayHello();
+
+        // Explicit Binding
+        let sayHello1 = function() {
+            console.log("Hello, " + this.name);
+        };
+
+        let person3 = {
+            name: "John"
+        };
+
+        sayHello1.call(person3);
+
+        // Arrow Functions
+        let sayHello2 = () => {
+            console.log("Hello, " + this.name);
+        };
+
+        let person4 = {
+            name: "John",
+            sayHello: sayHello2
+        };
+
+        person4.sayHello();
+
+        // Arrow Functions with Parameters
+        let sayHello3 = (name) => {
+            console.log("Hello, " + name);
+        };
+
+        sayHello3("John");
+
+        
     </script>
     
 </body>
