@@ -12,6 +12,9 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Aug 20, 2024**
 - **[JS-Class2.html](JS-Class2.html)** - A basic HTML file to understand the fundamentals of JavaScript.
 
+**Aug 22, 2024**
+- **[JS-Class3.html](JS-Class3.html)** - A basic HTML file to understand the fundamentals of JavaScript.
+
 ---
 
 ## Latest Update: August 13, 2024

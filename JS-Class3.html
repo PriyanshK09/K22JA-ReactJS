@@ -50,7 +50,60 @@
         console.log(numbers);
         appendOutput('Array Copywithin Method', numbers);
 
-        
+        // Array Traverse ES5 vs ES6 :
+        appendOutput('Array Traverse ES5 vs ES6', 'Array Traverse ES5 vs ES6');
+        let C = ["A", "B", "C", "D", "E", "F"];
+        // ES5
+        for (let i = 0; i < C.length; i++) {
+            console.log(C[i]);
+        }
+        appendOutput('Array Traverse ES5', C);
+
+
+        // ES6
+        for (let i of C) {
+            console.log(i);
+        }
+        appendOutput('Array Traverse ES6', C);
+
+        // Array Find Method :
+        // Syntax : array.find(function(currentValue, index, arr), thisValue)
+        appendOutput('Array Find Method', 'Array Find Method is used to find the first element in an array that passes a test (provided as a function).');
+        const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(numbers2);
+        appendOutput('Original Array', numbers2);
+        const firstNumber = numbers2.find(function(number) {
+            return number > 5;
+        });
+        console.log(firstNumber);
+        appendOutput('Array Find Method', firstNumber);
+
+        // Array Write Method :
+        // Syntax : array.fill(value, start, end)
+        appendOutput('Array Write Method', 'Array Write Method is used to fill the specified elements in an array with a static value.');
+        const numbers3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(numbers3);
+        appendOutput('Original Array', numbers3);
+
+        numbers3.fill(0, 3, 6);
+        console.log(numbers3);
+        appendOutput('Array Write Method', numbers3);
+
+        // MAP Method ES5 vs ES6 :
+        appendOutput('MAP Method ES5 vs ES6', 'MAP Method ES5 vs ES6');
+        const student = [ {id: 1, name: 'John'}, {id: 2, name: 'Doe'}, {id: 3, name: 'Smith'} ];
+
+        console.log(student[0].name);
+        appendOutput('MAP Method ES5', student[0].name);
+        const st = student.map(function(student) {
+            return student.name;
+        });
+        console.log(st);
+        appendOutput('MAP Method ES5', st);
+
+        const st2 = student.map(student => student.name);
+        console.log(st2);
+        appendOutput('MAP Method ES6', st2);
     </script>
 </body>
 </html>
