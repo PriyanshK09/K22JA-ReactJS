@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-bottom: 20px;
+        }
+        .output h3 {
+            margin-bottom: 5px;
+        }
+        .output pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output-container"></div>
+
+    <script>
+        function appendOutput(title, content) {
+            const container = document.getElementById('output-container');
+            const outputDiv = document.createElement('div');
+            outputDiv.className = 'output';
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = title;
+            const contentElement = document.createElement('pre');
+            contentElement.textContent = content;
+            outputDiv.appendChild(titleElement);
+            outputDiv.appendChild(contentElement);
+            container.appendChild(outputDiv);
+        }
+
+        // Array Copywithin Method :
+        // Syntax : array.copyWithin(target, start, end)
+        appendOutput('Array Copywithin Method', 'Array Copywithin Method is used to copy a part of an array to another location in the same array without modifying its length.');
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(numbers);
+        appendOutput('Original Array', numbers);
+        numbers.copyWithin(3, 0, 3);
+        console.log(numbers);
+        appendOutput('Array Copywithin Method', numbers);
+
+        
+    </script>
+</body>
+</html>
