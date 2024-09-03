@@ -29,9 +29,6 @@ import './index.css';
 //   );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Navigation />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Navigation />,document.getElementById('root')
 );
 
