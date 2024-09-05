@@ -1,35 +1,84 @@
-/* Navigation.css */
-
-nav {
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
-ul {
-    list-style-type: none;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
-}
-
-li {
-    display: inline;
-    margin-right: 10px;
-}
-
-a {
-    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  /* Minimal styling for the navigation bar */
+  nav {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Flexbox to center the items and space them evenly */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Minimal styling for the links */
+  nav ul li a {
+    font-family: 'Arial', sans-serif;
     color: #333;
-}
-
-input[type="text"] {
-    padding: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  /* Hover effect with subtle color change */
+  nav ul li a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* Styling for the search input */
+  nav ul li input[type="text"] {
+    padding: 6px;
+    border-radius: 4px;
     border: 1px solid #ccc;
-}
-
-button {
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
+    font-size: 1rem;
+    width: 140px;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect for search input */
+  nav ul li input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Styling for the search button */
+  nav ul li button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  /* Hover effect for the search button */
+  nav ul li button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Minimal responsive design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

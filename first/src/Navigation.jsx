@@ -13,6 +13,7 @@ function Navigation(props) {
             <a href="/about">{props.about}</a>
           </li>
           <li>
+            {/* Default Prop Example */}
             <a href="/contact">{props.contact}</a>
           </li>
           <li>

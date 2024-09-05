@@ -31,7 +31,7 @@ import './index.css';
 
 ReactDOM.render(
   <>
-    <Navigation home="Home Page" about="About" contact="Contact" services="Services" />
+    <Navigation home="Home Page" about="About" services="Services" />
     <Paragraph content="ReactJS is a JavaScript library for building user interfaces. It allows you to create reusable UI components and efficiently update and render them when the data changes." />
     <SecondPara content="ReactJS follows a component-based architecture, making it easy to build complex UIs by composing smaller, reusable components. With ReactJS, you can build interactive and dynamic web applications." />
     <ThirdPara content="ReactJS is maintained by Facebook and a community of developers. It is open-source and has a large ecosystem of tools and libraries that make it easy to build and deploy web applications." />
