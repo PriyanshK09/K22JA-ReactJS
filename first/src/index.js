@@ -29,6 +29,8 @@ import './index.css';
 //   );
 
 ReactDOM.render(
-    <Navigation />,document.getElementById('root')
+  // Props to Navigation
+  <Navigation home="Home Page" about="About" contact="Contact" services="Services" />,
+  document.getElementById('root')
 );
 
