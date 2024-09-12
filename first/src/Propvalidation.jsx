@@ -63,7 +63,7 @@ Propvalidation.defaultProps = {
     propFunc: function (e) {
         return e;
     },
-    propNumber: 1,
+    propNumber: 0,
     propString: "Hello, World!",
 };
 
