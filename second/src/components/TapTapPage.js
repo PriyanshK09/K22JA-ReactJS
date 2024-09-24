@@ -3,10 +3,20 @@ import './TapTapPage.css';
 
 const TapTapPage = () => {
   const [tapCount, setTapCount] = useState(0);
+  const [name, setName] = useState('');
   const renderCount = useRef(0);
+  const nameInputRef = useRef(null);
 
   const handleTap = () => {
     setTapCount(tapCount + 1);
+  };
+
+  const handleInputClick = (inputRef) => {
+    inputRef.current.style.backgroundColor = 'lightblue';
+  };
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
   };
 
   useEffect(() => {
@@ -15,8 +25,6 @@ const TapTapPage = () => {
 
   useEffect(() => {
     renderCount.current += 1;
-    // renderCount.current = renderCount.current + 1;
-    // setTapCount(tapCount + 1);
   });
 
   return (
@@ -27,8 +35,22 @@ const TapTapPage = () => {
       <button className="tap-tap-button" onClick={handleTap}>Tap Me!</button>
       <button className="tap-tap-reset" onClick={() => setTapCount(0)}>Reset</button>
       <button className="tap-tap-decrement" onClick={() => setTapCount(tapCount - 1)}>Decrement</button>
-      <p className='tap-tap-instructions'>Tap the button to increase the count. Check the console to see the updated count.</p>
+      <p className='tap-tap-instructions'>Tap the button to increase the count.</p>
+      <p className='tap-tap-instructions'>Check the console to see the updated count.</p>
       <p className='tap-tap-instructions'>This is a simple example of using React hooks.</p>
+
+      <h1 className='tap-tap-title'>Personal Information</h1>
+      {/* Input Box which takes name */}
+      <input
+        type='text'
+        placeholder='Enter your name'
+        ref={nameInputRef}
+        onClick={() => handleInputClick(nameInputRef)}
+        onChange={handleNameChange}
+      />
+      <p className='tap-tap-instructions'>Welcome to Tap-Tap Page! {name}</p>
+      <p className='tap-tap-instructions'>Click on the input boxes to change their background color.</p>
+      <p className='tap-tap-instructions'>This is a simple example of using React refs.</p>
     </div>
   );
 };
