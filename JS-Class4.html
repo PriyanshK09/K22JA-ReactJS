@@ -1,0 +1,46 @@
+<!--  What is useState -->
+<!-- useState is a Hook that allows you to have state variables in functional components. -->
+
+<!--  What is useEffect -->
+<!-- The Effect Hook lets you perform side effects in function components. -->
+
+<!-- Example of useState -->
+<script type="text/babel">
+    function Counter() {
+        const [count, setCount] = React.useState(0);
+
+        return (
+            <div>
+                <p>You clicked {count} times</p>
+                <button onClick={() => setCount(count + 1)}>
+                    Click me
+                </button>
+            </div>
+        );
+    }
+
+    ReactDOM.render(<Counter />, document.getElementById('root'));
+</script>
+
+<!-- Example of useEffect -->
+<script type="text/babel">
+    function Timer() {
+        const [count, setCount] = React.useState(0);
+
+        React.useEffect(() => {
+            const timer = setInterval(() => {
+                setCount(prevCount => prevCount + 1);
+            }, 1000);
+
+            return () => clearInterval(timer);
+        }, []);
+
+        return (
+            <div>
+                <p>Timer: {count} seconds</p>
+            </div>
+        );
+    }
+
+    ReactDOM.render(<Timer />, document.getElementById('root'));
+</script>
