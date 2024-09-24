@@ -25,8 +25,7 @@ const TapTapPage = () => {
       <button className="tap-tap-button" onClick={handleTap}>Tap Me!</button>
       <button className="tap-tap-reset" onClick={() => setTapCount(0)}>Reset</button>
       <button className="tap-tap-decrement" onClick={() => setTapCount(tapCount - 1)}>Decrement</button>
-      <p className='tap-tap-instructions'>Tap the button to increase the count.</p>
-      <p className='tap-tap-instructions'>Check the console to see the updated count.</p>
+      <p className='tap-tap-instructions'>Tap the button to increase the count. Check the console to see the updated count.</p>
       <p className='tap-tap-instructions'>This is a simple example of using React hooks.</p>
     </div>
   );
