@@ -1,30 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
+.tap-tap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
+.tap-tap-title {
+    font-size: 2.5rem;
     color: #333;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.2em;
-    color: #666;
+.tap-tap-count,
+.tap-tap-render-count {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 10px 0;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
+.tap-tap-button,
+.tap-tap-reset,
+.tap-tap-decrement {
     padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
+    margin: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.tap-tap-button:hover,
+.tap-tap-reset:hover,
+.tap-tap-decrement:hover {
     background-color: #0056b3;
+}
+
+.tap-tap-instructions {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
 }
