@@ -15,6 +15,8 @@ const TapTapPage = () => {
 
   useEffect(() => {
     renderCount.current += 1;
+    // renderCount.current = renderCount.current + 1;
+    // setTapCount(tapCount + 1);
   });
 
   return (
