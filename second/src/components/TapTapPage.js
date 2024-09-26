@@ -1,9 +1,22 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
 import './TapTapPage.css';
 
-const TapTapPage = () => {
+// Create the TapContext
+const TapContext = createContext();
+
+const TapProvider = ({ children }) => {
   const [tapCount, setTapCount] = useState(0);
+
+  return (
+    <TapContext.Provider value={{ tapCount, setTapCount }}>
+      {children}
+    </TapContext.Provider>
+  );
+};
+
+const TapTapPage = () => {
+  const { tapCount, setTapCount } = useContext(TapContext);
   const [name, setName] = useState('');
   const renderCount = useRef(0);
   const nameInputRef = useRef(null);
@@ -11,7 +24,7 @@ const TapTapPage = () => {
 
   const handleTap = useCallback(() => {
     setTapCount(prevCount => prevCount + 1);
-  }, []);
+  }, [setTapCount]);
 
   const handleInputClick = useCallback((inputRef) => {
     inputRef.current.style.backgroundColor = 'lightblue';
@@ -57,7 +70,6 @@ const TapTapPage = () => {
       <p className="tap-tap-instructions">Welcome to Tap-Tap Page! {name}</p>
       <p className="tap-tap-instructions">Click on the input boxes to change their background color.</p>
       <p className="tap-tap-instructions">This is a simple example of using React refs.</p>
-
     </div>
   );
 };
@@ -67,4 +79,23 @@ TapTapPage.propTypes = {
   name: PropTypes.string,
 };
 
-export default TapTapPage;
+const AnotherComponent = () => {
+  const { tapCount, setTapCount } = useContext(TapContext);
+
+  return (
+    <div className="another-component">
+      <h2>Another Component (Demonstration of useContext)</h2>
+      <p>Tap Count in Another Component: {tapCount}</p>
+      <button onClick={() => setTapCount(prevCount => prevCount + 1)}>Increment from Another Component</button>
+    </div>
+  );
+};
+
+const App = () => (
+  <TapProvider>
+    <TapTapPage />
+    <AnotherComponent />
+  </TapProvider>
+);
+
+export default App;

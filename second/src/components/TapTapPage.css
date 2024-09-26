@@ -65,3 +65,39 @@ input[type="number"]:focus {
     outline: none;
     border-color: #007bff;
 }
+
+/* Styles for AnotherComponent */
+.another-component {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.another-component h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.another-component p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.another-component button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.another-component button:hover {
+    background-color: #218838;
+}
