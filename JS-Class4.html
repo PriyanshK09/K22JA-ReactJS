@@ -52,3 +52,49 @@
 
 <!-- What is useContext -->
 <!-- useContext is a hook that allows you to consume values from the Context API. -->
+
+<!-- Example of useRef -->
+
+<script type="text/babel">
+    function TextInputWithFocusButton() {
+        const inputEl = React.useRef(null);
+        const onButtonClick = () => {
+            inputEl.current.focus();
+        };
+
+        return (
+            <div>
+                <input ref={inputEl} type="text" />
+                <button onClick={onButtonClick}>Focus the input</button>
+            </div>
+        );
+    }
+
+    ReactDOM.render(<TextInputWithFocusButton />, document.getElementById('root'));
+</script>
+
+<!-- Example of useContext -->
+
+<script type="text/babel">
+    const ThemeContext = React.createContext('light');
+
+    function ThemeButton() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function App() {
+        return (
+            <ThemeContext.Provider value="dark">
+                <ThemeButton />
+            </ThemeContext.Provider>
+        );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
