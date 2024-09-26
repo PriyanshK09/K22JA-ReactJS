@@ -23,7 +23,8 @@
 
 .tap-tap-button,
 .tap-tap-reset,
-.tap-tap-decrement {
+.tap-tap-decrement,
+.tap-tap-submit {
     padding: 10px 20px;
     margin: 10px;
     font-size: 1em;
@@ -37,7 +38,8 @@
 
 .tap-tap-button:hover,
 .tap-tap-reset:hover,
-.tap-tap-decrement:hover {
+.tap-tap-decrement:hover,
+.tap-tap-submit:hover {
     background-color: #0056b3;
 }
 

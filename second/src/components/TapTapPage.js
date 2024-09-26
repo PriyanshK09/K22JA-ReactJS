@@ -7,6 +7,7 @@ const TapTapPage = () => {
   const [name, setName] = useState('');
   const renderCount = useRef(0);
   const nameInputRef = useRef(null);
+  const containerRef = useRef(null);
 
   const handleTap = useCallback(() => {
     setTapCount(prevCount => prevCount + 1);
@@ -20,13 +21,20 @@ const TapTapPage = () => {
     setName(value);
   };
 
+  const handleSubmit = () => {
+    alert('Form submitted!');
+    if (containerRef.current) {
+      containerRef.current.style.backgroundColor = 'lightgreen';
+    }
+  };
+
   useEffect(() => {
     console.log(`Tap count: ${tapCount}`);
     renderCount.current += 1;
   }, [tapCount]);
 
   return (
-    <div className="tap-tap-container">
+    <div className="tap-tap-container" ref={containerRef}>
       <h1 className="tap-tap-title">Tap-Tap Page</h1>
       <p className="tap-tap-count">Tap Count: {tapCount}</p>
       <p className="tap-tap-render-count">Render Count: {renderCount.current}</p>
@@ -45,9 +53,11 @@ const TapTapPage = () => {
         onClick={() => handleInputClick(nameInputRef)}
         onChange={handleNameChange}
       />
+      <button className="tap-tap-submit" onClick={handleSubmit}>Submit</button>
       <p className="tap-tap-instructions">Welcome to Tap-Tap Page! {name}</p>
       <p className="tap-tap-instructions">Click on the input boxes to change their background color.</p>
       <p className="tap-tap-instructions">This is a simple example of using React refs.</p>
+
     </div>
   );
 };
