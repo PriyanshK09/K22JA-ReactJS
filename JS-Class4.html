@@ -98,3 +98,95 @@
 
     ReactDOM.render(<App />, document.getElementById('root'));
 </script>
+
+<!-- USECONTEXT with 1 Parent and 3 Child Components -->
+
+<script type="text/babel">
+    function ThemeButton() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function ThemeButton2() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function ThemeButton3() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function App() {
+        return (
+            <ThemeContext.Provider value="dark">
+                <ThemeButton />
+                <ThemeButton2 />
+                <ThemeButton3 />
+            </ThemeContext.Provider>
+        );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+
+<!-- USECONTEXT with 1 Parent and 3 Child Components with different values -->
+
+<script type="text/babel">
+    function ThemeButton() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function ThemeButton2() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'light' ? 'black' : 'white', color: theme === 'light' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function ThemeButton3() {
+        const theme = React.useContext(ThemeContext);
+
+        return (
+            <button style={{ background: theme === 'dark' ? 'black' : 'white', color: theme === 'dark' ? 'white' : 'black' }}>
+                {theme}
+            </button>
+        );
+    }
+
+    function App() {
+        return (
+            <ThemeContext.Provider value="dark">
+                <ThemeButton />
+                <ThemeButton2 />
+                <ThemeButton3 />
+            </ThemeContext.Provider>
+        );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
