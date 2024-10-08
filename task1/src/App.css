@@ -1,0 +1,59 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.counter-container {
+  text-align: center;
+}
+
+.counter-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light button {
+  background-color: #eee;
+  color: black;
+}
+
+.dark button {
+  background-color: #444;
+  color: white;
+}
+
+.light button:hover {
+  background-color: #ddd;
+}
+
+.dark button:hover {
+  background-color: #555;
+}
