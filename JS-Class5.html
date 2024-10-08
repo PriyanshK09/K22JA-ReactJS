@@ -1,0 +1,22 @@
+<!-- Use of Context API in React -->
+
+<script>
+    import React, { createContext, useContext } from "react";
+    import Child1 from "./Child1";
+    const NameContext = createContext();
+    const AgeContext = createContext();
+
+    function App() {
+        const name = "Priyansh";
+        const age = 20;
+        return (
+            <NameContext.Provider value={name}>
+                <AgeContext.Provider value={age}>
+                    <Child />
+                </AgeContext.Provider>
+            </NameContext.Provider>
+        );
+    }
+    export default App;
+    export { NameContext, AgeContext };
+</script>
