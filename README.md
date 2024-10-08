@@ -18,6 +18,9 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Aug 2*, 2024**
 - **[JS-Class4.html](JS-Class4.html)** - A basic HTML file to understand the fundamentals of MPA, SPA, and React Framework.
 
+**Oct 8*, 2024**
+- **[JS-Class5.html](JS-Class5.html)** - A basic HTML file to understand the fundamentals of React Components.
+
 ---
 
 ## Latest Update: August 13, 2024

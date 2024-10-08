@@ -84,3 +84,21 @@
         );
     }
 </script>
+
+<!-- UseCallback.js -->
+
+<script>
+    import React, { useState, useCallback } from "react";
+    import Usechild from "./Usechild";
+    const UseCallback = () => {
+        const [count, setCount] = useState(0);
+        
+    const Increment=()=>{
+        setCount(count+1);
+    }
+    const Decrement=()=>{
+        if (count>0) {
+            setCount(count-1);
+        }
+    };
+    
