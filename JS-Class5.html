@@ -1,4 +1,20 @@
 <!-- Use of Context API in React -->
+<!-- Child1 -->
+<script>
+    import React from "react";
+    import Child2 from "./Child2";
+    function Child1() {
+        return (
+            <div>
+                <h1>Child1</h1>
+                <Child2 />
+            </div>
+        );
+    }
+    // export default Child1;
+</script>
+
+<!-- Child2 -->
 
 <script>
     import React, { createContext, useContext } from "react";
@@ -17,6 +33,25 @@
             </NameContext.Provider>
         );
     }
-    export default App;
+    // export default App;
     export { NameContext, AgeContext };
+</script>
+
+<!-- Child3 -->
+
+<script>
+    import React, { useContext } from "react";
+    import { NameContext, AgeContext } from "./App";
+
+    function Child3() {
+        const name = useContext(NameContext);
+        const age = useContext(AgeContext);
+        return (
+            <div>
+                <h1>My name is {name}</h1>
+                <h1>My age is {age}</h1>
+            </div>
+        );
+    }
+    // export default Child3;
 </script>
