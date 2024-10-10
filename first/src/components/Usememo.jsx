@@ -1,16 +1,25 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import './Usememo.css';
 
 function Usememo() {
     const [add, setAdd] = useState(0);
     const [sub, setSub] = useState(100);
+    const [delayedMultiply, setDelayedMultiply] = useState(0);
 
     const multiply = useMemo(() => {
         console.log("Multiplication");
-        let result = add * 5;
-        for (let i = 0; i < 1000000000; i++) {} // Deliberate loop to slow down execution
-        return result;
+        return add * 5;
     }, [add]);
+
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            console.log("🚀 ~ file: Usememo.jsx ~ line 14 ~ delayedMultiply ~ multiply", multiply);
+            for (let i = 0; i < 1000000000; i++) {} // Deliberate loop to slow down execution
+            setDelayedMultiply(multiply);
+        }, 1000); // 1 second delay
+
+        return () => clearTimeout(delay);
+    }, [multiply]);
 
     return (
         <>
@@ -21,6 +30,8 @@ function Usememo() {
             <span>{sub}</span>
             <br />
             <span>{multiply}</span>
+            <br />
+            <span><p>Delayed Multiply : </p>{delayedMultiply}</span>
         </>
     );
 }
