@@ -21,6 +21,9 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Oct 8*, 2024**
 - **[JS-Class5.html](JS-Class5.html)** - A basic HTML file to understand the fundamentals of React Components.
 
+**Oct 10*, 2024**
+- **[JS-Class6.html](JS-Class6.html)** - A basic HTML file to understand the usage of useMemo and useCallback hooks.
+
 ---
 
 ## Latest Update: August 13, 2024

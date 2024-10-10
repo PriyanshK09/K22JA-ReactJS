@@ -6,6 +6,7 @@ import Propvalidation from './Propvalidation';
 import Bootstrap from './Bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassAct from './ClassAct';
+import Usememo from './components/Usememo';
 import './index.css';
 
 // ReactDOM.render(<div>
@@ -42,6 +43,7 @@ ReactDOM.render(
     <Propvalidation />
     <Bootstrap />
     <ClassAct />
+    <Usememo />
 
   </>,
   document.getElementById('root')
