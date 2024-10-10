@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import './Usememo.css';
 
 function Usememo() {
@@ -21,6 +21,18 @@ function Usememo() {
         return () => clearTimeout(delay);
     }, [multiply]);
 
+    const useCal = useCallback(() => {
+        const addNumbers = (a, b) => {
+            return a + b;
+        };
+        let num1 = 2;
+        let num2 = 3;
+        console.log(addNumbers(num1, num2));
+        num1++;
+        num2++;
+        return addNumbers(num1, num2);
+    }, []);
+
     return (
         <>
             <button onClick={() => setAdd(add + 1)}>Addition</button>
@@ -32,6 +44,9 @@ function Usememo() {
             <span>{multiply}</span>
             <br />
             <span><p>Delayed Multiply : </p>{delayedMultiply}</span>
+            <br />
+            <button onClick={useCal}>Use Callback</button>
+            <span>{useCal}</span>
         </>
     );
 }
