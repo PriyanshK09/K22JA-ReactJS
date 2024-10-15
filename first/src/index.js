@@ -7,6 +7,7 @@ import Bootstrap from './Bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassAct from './ClassAct';
 import Usememo from './components/Usememo';
+import CounterComponent from './components/CounterComponent';
 import './index.css';
 
 // ReactDOM.render(<div>
@@ -44,7 +45,7 @@ ReactDOM.render(
     <Bootstrap />
     <ClassAct />
     <Usememo />
-
+    <CounterComponent />
   </>,
   document.getElementById('root')
 );
