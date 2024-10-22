@@ -16,9 +16,32 @@ const RegistrationForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { password, confirmPassword } = formData;
+    const { username, email, password, confirmPassword } = formData;
+
+    if (!username) {
+      setError('Username is required');
+      setSuccess('');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Invalid email format');
+      setSuccess('');
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('Password must be at least 6 characters long');
+      setSuccess('');
+      return;
+    }
 
     if (password !== confirmPassword) {
       setError('Passwords do not match');
