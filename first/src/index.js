@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassAct from './ClassAct';
 import Usememo from './components/Usememo';
 import CounterComponent from './components/CounterComponent';
+import ControlledComponent from './components/ControlledComponent';
+import UncontrolledComponent from './components/UncontrolledComponent';
 import './index.css';
 
 // ReactDOM.render(<div>
@@ -46,6 +48,8 @@ ReactDOM.render(
     <ClassAct />
     <Usememo />
     <CounterComponent />
+    <ControlledComponent />
+    <UncontrolledComponent />
   </>,
   document.getElementById('root')
 );

@@ -24,9 +24,13 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Oct 10*, 2024**
 - **[JS-Class6.html](JS-Class6.html)** - A basic HTML file to understand the usage of useMemo and useCallback hooks.
 
+**Oct 22*, 2024**
+- **[JS-Class7.html](first/src/components/ControlledComponent.jsx)** - A basic HTML file to understand the usage of controlled components.
+- **[JS-Class7.html](first/src/components/UncontrolledComponent.jsx)** - A basic HTML file to understand the usage of uncontrolled components.
+
 ---
 
-## Latest Update: August 13, 2024
+## Latest Update: October 22, 2024
 This section will be updated with the latest projects and notes from my ReactJS class.
 
 ---
