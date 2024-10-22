@@ -10,6 +10,8 @@ import Usememo from './components/Usememo';
 import CounterComponent from './components/CounterComponent';
 import ControlledComponent from './components/ControlledComponent';
 import UncontrolledComponent from './components/UncontrolledComponent';
+import Login from './components/Login';
+import RegistrationForm from './components/RegistrationForm';
 import './index.css';
 
 // ReactDOM.render(<div>
@@ -50,6 +52,8 @@ ReactDOM.render(
     <CounterComponent />
     <ControlledComponent />
     <UncontrolledComponent />
+    <Login />
+    <RegistrationForm />
   </>,
   document.getElementById('root')
 );

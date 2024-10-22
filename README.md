@@ -27,6 +27,8 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Oct 22*, 2024**
 - **[JS-Class7.html](first/src/components/ControlledComponent.jsx)** - A basic HTML file to understand the usage of controlled components.
 - **[JS-Class7.html](first/src/components/UncontrolledComponent.jsx)** - A basic HTML file to understand the usage of uncontrolled components.
+- **[JS-Class7.html](first/src/components/RegistrationForm.jsx)** - A basic HTML file to understand the usage of registration form.
+- **[JS-Class7.html](first/src/components/Login.jsx)** - A basic HTML file to understand the usage of login form.
 
 ---
 
