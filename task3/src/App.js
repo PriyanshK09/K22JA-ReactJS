@@ -4,6 +4,7 @@ import React from 'react';
 import Get from './components/Get';
 import Post from './components/Post';
 import Put from './components/Put';
+import Delete from './components/Delete';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Get />
             <Post />
             <Put />
+            <Delete />
         </div>
     );
 }
