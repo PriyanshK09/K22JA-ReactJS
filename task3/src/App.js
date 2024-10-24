@@ -2,6 +2,7 @@ import React from 'react';
 // import Stories from './components/Child';
 // import Login from './components/Login';
 import Get from './components/Get';
+import Post from './components/Post';
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             {/* <Stories /> */}
             {/* <Login /> */}
             <Get />
+            <Post />
         </div>
     );
 }
