@@ -33,7 +33,9 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 **Oct 24*, 2024**
 - **[JS-Class8.html](task3/src/components/Stories.js)** - A basic HTML file to understand the usage of API Call.
 - **[JS-Class8.html](task3/src/components/Login.js)** - A basic HTML file to understand the usage of login form.
-- **[JS-Class8.html](task3/src/components/Gets.js)** - A basic HTML file to understand the usage of GET request. (AXIOS)
+- **[JS-Class8.html](task3/src/components/Get.js)** - A basic HTML file to understand the usage of GET request. (AXIOS)
+- **[JS-Class8.html](task3/src/components/Post.js)** - A basic HTML file to understand the usage of POST request. (AXIOS)
+- **[JS-Class8.html](task3/src/components/Put.js)** - A basic HTML file to understand the usage of PUT request. (AXIOS)
 
 ---
 

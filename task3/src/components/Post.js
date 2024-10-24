@@ -25,7 +25,15 @@ const Post = () => {
             <br />
             <h1>POST Request using Axios</h1>
             <button onClick={handlePostRequest}>Make Post Request</button>
-            {responseData && <p>{JSON.stringify(responseData)}</p>}
+            {/* Formatted Data */}
+            {responseData && <div>
+                <h3>Response Data: </h3>
+                <p><strong>Title:</strong> {responseData.title}</p>
+                <p><strong>Body:</strong> {responseData.body}</p>
+                <p><strong>UserId:</strong> {responseData.userId}</p>
+                <p><strong>Id:</strong> {responseData.id}</p>
+            </div>}
+            {/* Error Message */}
             {error && <p>{error.message}</p>}
             <br />
         </div>
