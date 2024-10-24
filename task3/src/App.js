@@ -3,6 +3,7 @@ import React from 'react';
 // import Login from './components/Login';
 import Get from './components/Get';
 import Post from './components/Post';
+import Put from './components/Put';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             {/* <Login /> */}
             <Get />
             <Post />
+            <Put />
         </div>
     );
 }
