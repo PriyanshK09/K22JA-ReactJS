@@ -30,6 +30,11 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 - **[JS-Class7.html](first/src/components/RegistrationForm.jsx)** - A basic HTML file to understand the usage of registration form.
 - **[JS-Class7.html](first/src/components/Login.jsx)** - A basic HTML file to understand the usage of login form.
 
+**Oct 24*, 2024**
+- **[JS-Class8.html](task3/src/components/Stories.js)** - A basic HTML file to understand the usage of API Call.
+- **[JS-Class8.html](task3/src/components/Login.js)** - A basic HTML file to understand the usage of login form.
+- **[JS-Class8.html](task3/src/components/Gets.js)** - A basic HTML file to understand the usage of GET request. (AXIOS)
+
 ---
 
 ## Latest Update: October 22, 2024
