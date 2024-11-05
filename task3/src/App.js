@@ -23,7 +23,6 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import './App.css';
 
 // React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, 
 // allows changing the browser URL, and keeps UI in sync with the URL.
@@ -34,34 +33,44 @@ import './App.css';
 // Import necessary components from react-router-dom
 
 // Define some basic components for demonstration
+
+import './App.css';
+
 const Home = () => <h2>Home Page</h2>;
 const About = () => <h2>About Page</h2>;
+const Services = () => <h2>Services Page</h2>;
+const Blog = () => <h2>Blog Page</h2>;
 const Contact = () => <h2>Contact Page</h2>;
 
-// Main App component
 const App = () => {
     return (
         <Router>
-            <div>
-                {/* Navigation Links */}
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
+            <div className="app">
+                <nav className="navbar">
+                    <div className="navbar-logo">MyWebsite</div>
+                    <ul className="navbar-list">
+                        <li className="navbar-item">
+                            <Link className="navbar-link" to="/">Home</Link>
                         </li>
-                        <li>
-                            <Link to="/about">About</Link>
+                        <li className="navbar-item">
+                            <Link className="navbar-link" to="/about">About</Link>
                         </li>
-                        <li>
-                            <Link to="/contact">Contact</Link>
+                        <li className="navbar-item">
+                            <Link className="navbar-link" to="/services">Services</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link className="navbar-link" to="/blog">Blog</Link>
+                        </li>
+                        <li className="navbar-item">
+                            <Link className="navbar-link" to="/contact">Contact</Link>
                         </li>
                     </ul>
                 </nav>
-
-                {/* Route Definitions */}
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/blog" element={<Blog />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </div>
