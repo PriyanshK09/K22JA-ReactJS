@@ -23,6 +23,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import './App.css';
 
 // React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, 
 // allows changing the browser URL, and keeps UI in sync with the URL.
