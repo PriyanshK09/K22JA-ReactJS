@@ -37,6 +37,9 @@ Welcome to my K22JA-ReactJS repository! This repository contains projects and no
 - **[JS-Class8.html](task3/src/components/Post.js)** - A basic HTML file to understand the usage of POST request. (AXIOS)
 - **[JS-Class8.html](task3/src/components/Put.js)** - A basic HTML file to understand the usage of PUT request. (AXIOS)
 
+**Nov 5*, 2024**
+- **[JS-Class9.html](/JS-Class9.js)** - A basic HTML file to understand the usage of React Router.
+
 ---
 
 ## Latest Update: October 22, 2024

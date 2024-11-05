@@ -1,28 +1,5 @@
-// import React from 'react';
-// // import Stories from './components/Child';
-// // import Login from './components/Login';
-// import Get from './components/Get';
-// import Post from './components/Post';
-// import Put from './components/Put';
-// import Delete from './components/Delete';
-
-// function App() {
-//     return (
-//         <div className="App">
-//             {/* <Stories /> */}
-//             {/* <Login /> */}
-//             <Get />
-//             <Post />
-//             <Put />
-//             <Delete />
-//         </div>
-//     );
-// }
-
-// export default App;
-
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 // React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, 
 // allows changing the browser URL, and keeps UI in sync with the URL.
@@ -58,11 +35,11 @@ const App = () => {
                 </nav>
 
                 {/* Route Definitions */}
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/contact" component={Contact} />
+                </Switch>
             </div>
         </Router>
     );
