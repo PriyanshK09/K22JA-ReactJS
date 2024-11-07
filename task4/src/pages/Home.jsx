@@ -1,9 +1,19 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 function Home() {
-    return (
-      <div className="container">
-        <h1>Welcome to the Home Page</h1>
-      </div>
-    );
-  }
+  const userId = 123; // Example User ID
   
-  export default Home;
+  return (
+    <div className="container">
+      <h1>Welcome to the Home Page</h1>
+      <p>
+        <Link to={`/profile/${userId}`}>
+          Go to Profile with User ID {userId}
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+export default Home;
